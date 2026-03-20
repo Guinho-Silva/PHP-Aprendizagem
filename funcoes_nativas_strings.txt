@@ -1,0 +1,11 @@
+-> strtolower($texto) => Transforma todos os caracteres da string em minúsculos
+
+-> strtoupper($texto) => Transforma todos os caracteres da string em maiúsculas
+
+-> ucfirst($texto) => Transforma o primeiro caracter da string em maiúsculas
+
+-> strlen($texto) => Conta a quantidade de caracteres de uma string
+
+-> str_replace (<procura por>, <substitui por>, $texto) => Substitui uma cadeia de caracteres por outra dentro de uma string
+
+-> substr($texto, <posição inicial>, <qtde caracteres>) => Retorna parte de uma strig
