@@ -1,0 +1,11 @@
+
+FUNÇÕES NATIVAS PARA MANIPULAR DATAS
+
+
+-> date(formato) => Recupera a data atual
+
+-> date_default_timezone_get(timezone) => Recupera o timezone default da aplicação
+
+-> date_default_timezone_set => Atalizar da aplicação
+
+-> strotime(data) => transforma datas textuais em segundos
