@@ -1,0 +1,11 @@
+Funções nativas para manipulação númerica
+
+-> ceil($numero) => Arredonda o valor para cima
+
+-> floor($numero) => Arredonda o valor baixo
+
+-> round($numero) => Arredonda o valor com base nas casas decimais
+
+-> rand() -> Gera um inteiro aleatório
+
+-> sqrt($numero) -> Retorna a raiz quadrada
