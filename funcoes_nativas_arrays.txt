@@ -1,0 +1,16 @@
+is_ array(array) -> verifica se o parâmetro é um array
+
+array_keys(array) -> retorna todas as chaves de um array
+
+sort(array) -> ordena um array e reajusta seus indicies
+
+asort(array) -> ordena um array preservando os índices
+
+count(array) -> Conta a quantidade de elementos de um array
+
+array_merge(array) -> funde um ou mais arrays
+
+explode(array) -> Divide uma string baseada em um delimitador
+
+implode(array) -> Junta elementos de um array em uma string
+
