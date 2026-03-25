@@ -28,6 +28,7 @@
     if($usuario_autenticacdo){
         echo 'Usuário autenticado com sucesso!';
         $_SESSION['Autenticado'] = 'SIM';
+        header('location: home.php');
     }
     else{
         # header('location: index.php') //funciona como se fosse um desvio caso não atenda um requisito
