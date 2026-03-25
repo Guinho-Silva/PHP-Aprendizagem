@@ -1,4 +1,11 @@
 <?php 
+
+    session_start(); // usar sempre antes de dados vindo do navegador
+
+    $_SESSION['Autenticado'];
+
+    // print_r($_SESSION); -> é um array
+
     // variavel que verifica se a autenticação foi realizada
 
     $usuario_autenticacdo = false;
@@ -20,10 +27,13 @@
         
     if($usuario_autenticacdo){
         echo 'Usuário autenticado com sucesso!';
+        $_SESSION['Autenticado'] = 'SIM';
     }
     else{
         # header('location: index.php') //funciona como se fosse um desvio caso não atenda um requisito
         header('location: index.php?login=erro');
+        
+        $_SESSION['Autenticado'] = 'NÂO';
     }
         
         

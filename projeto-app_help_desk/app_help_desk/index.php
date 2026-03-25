@@ -1,3 +1,16 @@
+<?php 
+  session_start();
+
+  if(!isset($_SESSION['Autenticado']) OR $_SESSION['Autenticado'] != 'SIM'){
+    header('location: index.php?login=erro2');
+  }
+
+
+  echo $_SESSION['Autenticado'];
+
+
+?>
+
 <html>
   <head>
     <meta charset="utf-8" />
@@ -44,13 +57,23 @@
 
                   if(isset($_GET['login']) && $_GET['login'] == 'erro'){
             
-                    
-                  
-
                   // O isset verifica se um determinado valor foi setado a um array
                 ?>
 
                   <div class="text-danger">Usuário ou senha inválido(s)</div>
+                <? 
+                  }
+                
+                ?>
+
+                <? 
+
+                  if(isset($_GET['login']) && $_GET['login'] == 'erro2'){
+            
+                  // O isset verifica se um determinado valor foi setado a um array
+                ?>
+
+                  <div class="text-danger">Faça login para poder navegar</div>
                 <? 
                   }
                 
