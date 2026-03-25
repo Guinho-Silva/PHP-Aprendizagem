@@ -45,7 +45,7 @@
               Login
             </div>
             <div class="card-body">
-              <form action="valida_login.php" method="$_POST"> <!--action pega os dados levando para um destino -->
+              <form action="valida_login.php" method="POST"> <!--action pega os dados levando para um destino -->
                 <div class="form-group">
                   <input name= "email" type="email" class="form-control" placeholder="E-mail">
                 </div>
