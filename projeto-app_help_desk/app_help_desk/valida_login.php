@@ -10,24 +10,45 @@
 
     $usuario_autenticacdo = false;
 
+    $usuario_id = null;
+    
+    $perfis = array(
+        1 => 'Administrativo',
+        2 => 'Usuário'
+    );
+
+    $usuario_perfil_id = null;
 
     // usuarios do sistema - Teste SEM banco
 
     $usuario_app = array(
-        array('email' => 'adm@teste.com.br', 'senha' => '123456'),
-        array('email' => 'user@teste.com.br', 'senha' => 'abcd')
+        array('id' => 1, 'email' => 'adm@teste.com.br', 'senha' => '1234', 'perfil_id' => 1 ),
+
+        array('id' => 2,'email' => 'user@teste.com.br', 'senha' => '1234','perfil_id' => 1 ),
+
+        array('id' => 3,'email' => 'joao@teste.com.br', 'senha' => '1234','perfil_id' => 2),
+
+        array('id' => 4,'email' => 'maria@teste.com.br', 'senha' => '1234', 'perfil_id' => 2)
     );
 
 
     foreach($usuario_app as $user){
         if($user['email'] == $_POST['email'] && $user['senha'] == $_POST['senha']){
             $usuario_autenticacdo = true; //variavel de controle
+            $usuario_id = $user['id'];
+
+            $usuario_perfil_id = $user['perfil_id'];
         }
     }
         
     if($usuario_autenticacdo){
         echo 'Usuário autenticado com sucesso!';
         $_SESSION['Autenticado'] = 'SIM';
+
+        $_SESSION['id'] = $usuario_id;
+
+        $_SESSION['perfil_id']= $usuario_perfil_id;
+
         header('location: home.php');
     }
     else{

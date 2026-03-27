@@ -1,5 +1,7 @@
 <?php 
 
+    session_start();
+
     echo '<pre>';
 
     print_r($_POST);
@@ -21,7 +23,7 @@
 
     //Tentar usar o implode('#', $_POST)
 
-    $texto = $titulo . '#' . $categoria . '#' . $descricao;
+    $texto = $_SESSION['id'] . '#' . $titulo . '#' . $categoria . '#' . $descricao;
 
     // PHP_EOL -> concatenar com o texto
     
