@@ -61,7 +61,9 @@
 
                 if($_SESSION['perfil_id'] == 2){
                   // so exibi o chamado se foi feito pelo usuario
-                  if($_SESSION['id'] !)
+                  if($_SESSION['id'] != $chamado_dados[0]){
+                    continue;
+                  }
                 }
 
 
