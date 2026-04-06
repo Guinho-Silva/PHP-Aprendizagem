@@ -35,7 +35,8 @@
             // Métodos da Classe
             function resumirCadFunc(){
                 // operador $this -> ajuste de contexto
-                return "O funcionario $this->nome do $this->telefone tem $this->numeroFilhos filhos";
+
+                return "O funcionario $this->nome do cargo de  $this->cargo e do telefone $this->telefone tem $this->numeroFilhos filhos e recebe R$$this->salario de salário";
             }
 
             function modificarNumFilhos($modificaFilho){
@@ -49,23 +50,17 @@
         // Instancia o objeto
         $y = new Funcionario();
 
-        $y->__set('nome', 'Iago');
+        $y->__set('nome', 'Tiago');
+        $y->__set('cargo', 'ADM');
         $y->__set('telefone', 1194842394);
-        $y->__set(1);
+        $y->__set('numeroFilhos', 1);
+        $y->__set('salario', 2500);
 
         // Chama o método da classe
         echo $y->resumirCadFunc();
         echo '<br />';
         
-        //Teste 2
-
-        $x = new Funcionario;
-        $x->setNome('Maria');
-        $x->setTelefone(184384847);
-        $x->setNumeroFilhos(3);
-
-        // Chamada do método
-        $x-> resumirCadFunc()
+    
     ?>
 </body>
 </html>
