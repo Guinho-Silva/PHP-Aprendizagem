@@ -7,15 +7,25 @@
 </head>
 <body>
     <?php
-    
-        class Carro{
-            public $placa = 'ABC1234';
-            public $cor = 'Bracnco';
+
+        // usamos extends para garantir a herança
+        class Carro extends Veiculo{
+             // Remover os atributos placa e cor para usar a herança
+
+            // public $placa = 'ABC1234';
+            // public $cor = 'Bracnco';
             public $teto_solar = true;
 
-            function acelerar(){
-                echo 'Acelar';
+            function __construct($placa, $cor)
+            {
+                $this->placa = $placa;
+
+                $this->cor = $cor;
             }
+
+            // function acelerar(){
+            //     echo 'Acelar';
+            // }
 
             function abrirTetoSolar() {
                 echo 'Abriar teto solar';
@@ -26,31 +36,45 @@
             }
         }
     
-        class moto{
-            public $placa = 'DEF122';
-            public $cor = 'Vermelho';
+        class Moto extends Veiculo{
+            // Remover os atributos placa e cor para usar a herança
+            // public $placa = 'DEF122';
+            // public $cor = 'Vermelho';
             public $contraPesoGuidao = true;
 
-            function acelerar(){
-            echo 'Acelerar';
+            function __construct($placa, $cor)
+            {
+               $this->placa = $placa;
+
+               $this->cor = $cor;
             }
+
+            // Remover o metodo acelarar
+
+            // function acelerar(){
+            // echo 'Acelerar';
+            // }
 
             function empinar(){
                 echo 'Empinar';
             }
         }
 
-        class Veiculi{
+        class Veiculo{
             public $placa = null;
             public $cor = null;
 
             function acelerar(){
-                echo 'Aceler'
+                echo 'Acelerar';
+            }
+
+            function frear(){
+                echo 'Frear';
             }
         }
-        $carro = new Carro();
+        $carro = new Carro('ABC1234', 'Preto');
 
-        $moto = new Moto();
+        $moto = new Moto('DEF5678', 'Azul');
         
         echo '<pre>';
         print_r($carro);
@@ -59,7 +83,22 @@
         echo '<pre>';
         print_r($moto);
         echo '</pre>';
+
+        echo '<hr />';
+
+        $carro->abrirTetoSolar();
+        echo '<br />';
+        $carro->acelerar();
         // $carro-> acelerar();
+        echo '<br />';
+        echo 'Métodos da MOTO';
+        echo '<br />';
+        $moto->empinar();
+        echo '<br />';
+        $moto->acelerar();
+        // Usando um novo método
+        echo '<br />';
+        $moto->frear()
 
 
     
